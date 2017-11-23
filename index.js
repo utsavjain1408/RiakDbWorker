@@ -3,11 +3,9 @@ import bodyParser from 'body-parser'
 import riak from 'basho-riak-client'
 var config = require('./config');
 
-let app = express();
+const app = express();
 const PORT =3000;
-var router = express.Router();
-
-router.get('/', (req,res)=>{
+app.get('/', (req,res) => {
     res.send(`Server is running on ${PORT}`);
     var client = config.createClient(function (e, c) {
         if (e) {
@@ -27,9 +25,6 @@ router.get('/', (req,res)=>{
     })
 })
 
-app.listen(PORT, (err, res) => {
-    if(err){
-        console.log('Err Hai')
-    }
+app.listen(PORT, () => {
     console.log(`Server Port ${PORT} pe chal raha hai! `)
 })

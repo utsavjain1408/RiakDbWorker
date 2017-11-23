@@ -7,9 +7,9 @@ var Riak = require('basho-riak-client');
 // you are running a one-node cluster installed from official
 // installation packages:
 //
- //var riakNodes = [ 'localhost:8087' ];
+ var riakNodes = [ 'localhost:8087' ];
 // var riakNodes = [ 'riak-test:10017', 'riak-test:10027', 'riak-test:10037', 'riak-test:10047' ];
-var riakNodes = [ 'riak@10.0.0133', 'riak@10.0.0.41', 'riak@10.0.50' ];
+//var riakNodes = [ 'riak@10.0.0.133', 'riak@10.0.0.41', 'riak@10.0.0.50' ];
 
 function Config() { }
 
