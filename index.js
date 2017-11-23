@@ -5,8 +5,9 @@ var config = require('./config');
 
 let app = express();
 const PORT =3000;
+var router = express.Router();
 
-app.route('/', (req,res)=>{
+router.get('/', (req,res)=>{
     res.send(`Server is running on ${PORT}`);
     var client = config.createClient(function (e, c) {
         if (e) {
